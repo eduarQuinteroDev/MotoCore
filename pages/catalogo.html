@@ -20,48 +20,66 @@
                 <a class="back-link" href="../index.html">Volver al inicio</a>
             </header>
 
+            <section class="catalog-filter" aria-label="Filtro por marca">
+                <label for="brand-filter">Filtrar por marca</label>
+                <select id="brand-filter" name="brand-filter">
+                    <option value="all">Todas las marcas</option>
+                    <option value="yamaha">Yamaha</option>
+                    <option value="honda">Honda</option>
+                    <option value="kawasaki">Kawasaki</option>
+                    <option value="ktm">KTM</option>
+                    <option value="suzuki">Suzuki</option>
+                    <option value="bajaj">Bajaj</option>
+                    <option value="cfmoto">CFMOTO</option>
+                    <option value="benelli">Benelli</option>
+                    <option value="bmw">BMW</option>
+                    <option value="ducati">Ducati</option>
+                </select>
+            </section>
+
             <section class="catalog-grid" aria-label="Catalogo de motos">
-                <article class="bike-card">
+                <a class="bike-card bike-card-link" data-brand="yamaha" href="./yamaha-mt03.html">
                     <img src="../assets/img/catologo/yamaha-mt03.jpg" alt="Yamaha MT-03" />
                     <h2>Yamaha MT-03</h2>
-                </article>
-                <article class="bike-card">
+                </a>
+                <article class="bike-card" data-brand="honda">
                     <img src="../assets/img/catologo/honda-cb190r.jpg" alt="Honda CB190R" />
                     <h2>Honda CB190R</h2>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-brand="kawasaki">
                     <img src="../assets/img/catologo/kawasaki-ninja400.jpeg" alt="Kawasaki Ninja 400" />
                     <h2>Kawasaki Ninja 400</h2>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-brand="ktm">
                     <img src="../assets/img/catologo/ktm-duke250.jpg" alt="KTM Duke 250" />
                     <h2>KTM Duke 250</h2>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-brand="suzuki">
                     <img src="../assets/img/catologo/susuki-gixxer250.jpeg" alt="Suzuki Gixxer 250" />
                     <h2>Suzuki Gixxer 250</h2>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-brand="bajaj">
                     <img src="../assets/img/catologo/bajaj-pulsarns200.jpg" alt="Bajaj Pulsar NS200" />
                     <h2>Bajaj Pulsar NS200</h2>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-brand="cfmoto">
                     <img src="../assets/img/catologo/cfmoto-300nk.jpg" alt="CFMOTO 300NK" />
                     <h2>CFMOTO 300NK</h2>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-brand="benelli">
                     <img src="../assets/img/catologo/benelli-tnt300.jpg" alt="Benelli TNT 300" />
                     <h2>Benelli TNT 300</h2>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-brand="bmw">
                     <img src="../assets/img/catologo/bmw-g310r.jpg" alt="BMW G 310 R" />
                     <h2>BMW G 310 R</h2>
                 </article>
-                <article class="bike-card">
+                <article class="bike-card" data-brand="ducati">
                     <img src="../assets/img/catologo/ducati-scrambler-r.png" alt="Ducati Scrambler Icon" />
                     <h2>Ducati Scrambler Icon</h2>
                 </article>
             </section>
         </main>
+        <script src="../assets/js/catalogo.js"></script>
     </body>
 </html>
