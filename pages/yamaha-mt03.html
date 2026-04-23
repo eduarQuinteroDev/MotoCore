@@ -4,10 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Yamaha MT-03 | MOTOCORE</title>
-        <link rel="stylesheet" href="../assets/css/yamaha-mt03.css" />
+        <link rel="stylesheet" href="../assets/css/model-detail.css" />
     </head>
     <body>
-        <main class="mt03-page">
+        <main class="model-page">
             <header class="hero">
                 <div class="hero-content">
                     <p class="eyebrow">Ficha dedicada</p>
@@ -17,14 +17,21 @@
                         de fin de semana. Destaca por su motor bicilindrico de 321 cc, su estilo Hyper Naked y una
                         configuracion que prioriza control, respuesta y confianza para uso diario.
                     </p>
+                    <div class="hero-meta">
+                        <span>Hyper Naked</span>
+                        <span>ABS</span>
+                        <span>321 cc</span>
+                    </div>
                     <div class="hero-actions">
                         <a class="btn btn-primary" href="#ficha">Ver ficha tecnica</a>
                         <a class="btn btn-secondary" href="./catalogo.html">Volver al catalogo</a>
                     </div>
+                    <button id="sound-toggle" class="btn btn-sound" type="button">Escuchar sonido MT-03</button>
                 </div>
                 <figure class="hero-media">
                     <img src="../assets/img/catologo/yamaha-mt03.jpg" alt="Yamaha MT-03 vista lateral" />
                 </figure>
+                <audio id="mt03-audio" src="../assets/sound/mt03-sound.mp3" preload="auto"></audio>
             </header>
 
             <section class="quick-specs" aria-label="Datos clave Yamaha MT-03">
@@ -117,28 +124,32 @@
 
             <section class="tools" aria-label="Herramientas rapidas">
                 <article class="tool-card">
-                    <h2>Calculadora de autonomia</h2>
+                    <h2>Estimacion de autonomia</h2>
                     <p>
-                        Ajusta el consumo esperado para estimar hasta donde podrias llegar con tanque completo.
+                        Elige el tipo de uso que mas se parece a tu manejo y te mostramos una referencia facil de
+                        entender sobre lo que podria rendir con el tanque lleno.
                     </p>
-                    <div class="range-controls">
-                        <label for="consumo">Consumo estimado (km/l)</label>
-                        <input id="consumo" type="range" min="18" max="35" value="26" />
-                        <p class="value-row">Valor actual: <span id="consumo-valor">26 km/l</span></p>
-                        <p class="result-row">Autonomia aproximada: <strong id="autonomia">364 km</strong></p>
+                    <div class="autonomy-scenarios" role="tablist" aria-label="Escenarios de autonomia">
+                        <button class="scenario-btn is-active" type="button" data-km-l="22" data-label="Ciudad">
+                            Ciudad
+                        </button>
+                        <button class="scenario-btn" type="button" data-km-l="26" data-label="Uso mixto">
+                            Uso mixto
+                        </button>
+                        <button class="scenario-btn" type="button" data-km-l="30" data-label="Ruta tranquila">
+                            Ruta tranquila
+                        </button>
                     </div>
-                </article>
-
-                <article class="tool-card">
-                    <h2>Sonido de la Yamaha MT-03</h2>
-                    <p>
-                        Presiona el boton para escuchar el sonido del modelo. Si lo vuelves a presionar, el audio se
-                        detendra.
-                    </p>
-                    <button id="sound-toggle" class="btn btn-primary sound-btn" type="button">
-                        Escuchar sonido MT-03
-                    </button>
-                    <audio id="mt03-audio" src="../assets/sound/mt03-sound.mp3" preload="auto"></audio>
+                    <div class="autonomy-summary">
+                        <p class="summary-label">Escenario elegido</p>
+                        <p class="summary-value" id="autonomy-mode">Uso mixto</p>
+                        <p class="result-row">Con el tanque lleno podria recorrer alrededor de <strong id="autonomia">364 km</strong></p>
+                        <p class="value-row">Referencia usada: <span id="consumo-valor">26 km/l</span></p>
+                        <p class="range-note">
+                            Es una referencia orientativa. El resultado real cambia segun trafico, velocidad, peso,
+                            mantenimiento y estilo de manejo.
+                        </p>
+                    </div>
                 </article>
 
                 <article class="tool-card info-card">
@@ -179,6 +190,6 @@
             </section>
         </main>
 
-        <script src="../assets/js/yamaha-mt03.js"></script>
+        <script src="../assets/js/model-detail.js"></script>
     </body>
 </html>

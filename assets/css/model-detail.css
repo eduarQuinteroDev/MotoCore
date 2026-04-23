@@ -43,13 +43,13 @@ body::before {
     pointer-events: none;
 }
 
-.mt03-page {
+.model-page {
     position: relative;
     width: min(1200px, 96%);
     margin: 0 auto;
 }
 
-.mt03-page::before {
+.model-page::before {
     content: "";
     position: absolute;
     top: 3rem;
@@ -62,7 +62,7 @@ body::before {
     pointer-events: none;
 }
 
-.mt03-page section,
+.model-page section,
 .hero {
     position: relative;
     z-index: 1;
@@ -307,7 +307,8 @@ body::before {
     margin-bottom: 1rem;
 }
 
-.tab-btn {
+.tab-btn,
+.scenario-btn {
     padding: 0.78rem 1rem;
     border-radius: 999px;
     border: 1px solid rgba(112, 138, 172, 0.22);
@@ -321,12 +322,14 @@ body::before {
         color 0.22s ease;
 }
 
-.tab-btn:hover {
+.tab-btn:hover,
+.scenario-btn:hover {
     transform: translateY(-2px);
     color: var(--text);
 }
 
-.tab-btn.is-active {
+.tab-btn.is-active,
+.scenario-btn.is-active {
     color: #06131c;
     border-color: transparent;
     background: linear-gradient(135deg, var(--accent), var(--accent-2));
@@ -391,32 +394,6 @@ body::before {
     flex-wrap: wrap;
     gap: 0.7rem;
     margin-top: 1rem;
-}
-
-.scenario-btn {
-    padding: 0.78rem 1rem;
-    border-radius: 999px;
-    border: 1px solid rgba(112, 138, 172, 0.22);
-    background: rgba(18, 24, 36, 0.82);
-    color: var(--muted);
-    cursor: pointer;
-    transition:
-        transform 0.22s ease,
-        border-color 0.22s ease,
-        box-shadow 0.22s ease,
-        color 0.22s ease;
-}
-
-.scenario-btn:hover {
-    transform: translateY(-2px);
-    color: var(--text);
-}
-
-.scenario-btn.is-active {
-    color: #06131c;
-    border-color: transparent;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    box-shadow: 0 0 18px rgba(86, 217, 255, 0.18);
 }
 
 .autonomy-summary {
