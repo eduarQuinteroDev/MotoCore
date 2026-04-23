@@ -1,0 +1,189 @@
+:root {
+    --bg: #0d1117;
+    --surface: #1b2432;
+    --surface-2: #263245;
+    --border: #3d4d64;
+    --text: #f3f7ff;
+    --muted: #b9c5d8;
+    --accent: #52d0ff;
+    --accent-2: #64ffc9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 10% 5%, #202b3b 0%, rgba(32, 43, 59, 0) 40%),
+        radial-gradient(circle at 88% 0%, #1f2340 0%, rgba(31, 35, 64, 0) 42%),
+        linear-gradient(150deg, #0d1117 0%, #131a26 56%, #0d1219 100%);
+    color: var(--text);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1.5rem 0.9rem 2.5rem;
+}
+
+main {
+    width: min(1150px, 96%);
+    margin: 0 auto;
+    background: linear-gradient(180deg, rgba(29, 38, 52, 0.95), rgba(19, 25, 34, 0.96));
+    border: 1px solid rgba(80, 97, 120, 0.56);
+    border-radius: 22px;
+    padding: 1.2rem;
+    box-shadow:
+        0 26px 56px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.catalog-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-end;
+    background: linear-gradient(160deg, rgba(52, 66, 86, 0.66), rgba(31, 41, 55, 0.72));
+    border: 1px solid rgba(85, 103, 128, 0.68);
+    border-radius: 16px;
+    padding: 1.05rem;
+    margin-bottom: 1.1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.catalog-header::after {
+    content: "";
+    position: absolute;
+    inset: auto -30px -50px auto;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(82, 208, 255, 0.35), rgba(82, 208, 255, 0));
+    pointer-events: none;
+}
+
+.eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.45rem;
+}
+
+.catalog-header h1 {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    margin-bottom: 0.5rem;
+}
+
+.catalog-header p {
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #07111b;
+    background: linear-gradient(120deg, var(--accent) 0%, var(--accent-2) 100%);
+    border-radius: 11px;
+    font-weight: 700;
+    padding: 0.68rem 1rem;
+    white-space: nowrap;
+    box-shadow: 0 10px 24px rgba(67, 209, 255, 0.27);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.back-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(67, 209, 255, 0.34);
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.1rem;
+}
+
+.bike-card {
+    background: linear-gradient(180deg, #1e2837 0%, var(--surface) 100%);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.bike-card:hover {
+    transform: translateY(-6px);
+    border-color: #7ad8ff;
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.34);
+}
+
+.bike-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    background: var(--surface-2);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.bike-card:hover img {
+    transform: scale(1.05);
+    filter: saturate(1.08);
+}
+
+.bike-card h2 {
+    font-size: 0.97rem;
+    letter-spacing: 0.02rem;
+    padding: 0.82rem 0.7rem 0.85rem;
+    text-align: center;
+    color: #e9f1ff;
+    border-top: 1px solid rgba(88, 104, 128, 0.42);
+}
+
+@media (max-width: 1000px) {
+    .catalog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .catalog-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .back-link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bike-card img {
+        height: 240px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 0.85rem;
+        border-radius: 16px;
+    }
+
+    .catalog-header {
+        border-radius: 13px;
+    }
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bike-card img {
+        height: 210px;
+    }
+}
