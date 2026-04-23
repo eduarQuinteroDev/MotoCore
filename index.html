@@ -1,9 +1,232 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>MOTOCORE</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
     </head>
-    <body></body>
+    <body>
+        <main>
+            <header class="hero" id="inicio">
+                <div class="hero-top">
+                    <h1>MOTOCORE</h1>
+                    <nav aria-label="Navegacion principal">
+                        <ul>
+                            <li><a href="#inicio">INICIO</a></li>
+                            <li><a href="#catalogo">CATALOGO</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="hero-content">
+                    <p class="eyebrow">Comunidad biker del Peru</p>
+                    <h2>Un espacio creado para vivir las motos con mas orden, mas inspiracion y mejor decision.</h2>
+                    <p>
+                        MOTOCORE nace para reunir en un solo lugar lo que un motero realmente necesita para avanzar:
+                        contexto del mercado local, comparacion practica entre alternativas y una comunidad con ganas de
+                        compartir experiencias reales.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#catalogo">Explorar contenido</a>
+                        <a class="btn btn-secondary" href="#experiencia">Conocer la experiencia</a>
+                    </div>
+                </div>
+
+                <div class="hero-media">
+                    <img src="./assets/img/comunidad-biker.jpg" alt="Grupo de moteros en ruta" />
+                </div>
+            </header>
+
+            <section class="stats" aria-label="Resumen de comunidad">
+                <article class="stat-card">
+                    <p class="stat-value" data-counter="2500">0</p>
+                    <p class="stat-label">Moteros alcanzados por la comunidad</p>
+                </article>
+                <article class="stat-card">
+                    <p class="stat-value" data-counter="145">0</p>
+                    <p class="stat-label">Modelos referenciados en el mercado local</p>
+                </article>
+                <article class="stat-card">
+                    <p class="stat-value" data-counter="38">0</p>
+                    <p class="stat-label">Guias y recursos para elegir mejor</p>
+                </article>
+                <article class="stat-card">
+                    <p class="stat-value" data-counter="12">0</p>
+                    <p class="stat-label">Rutas comunitarias destacadas cada mes</p>
+                </article>
+            </section>
+
+            <section class="intro" id="catalogo">
+                <h2>De moteros para moteros</h2>
+                <p>
+                    Este sitio web esta hecho de moteros para moteros. Aqui puedes encontrar un entorno pensado para la
+                    comunidad biker en Peru, con informacion clara y ordenada para descubrir modelos disponibles,
+                    entender diferencias importantes y encontrar puntos de referencia que te ayuden a comparar mas
+                    rapido y con mayor precision.
+                </p>
+            </section>
+
+            <section class="interest" id="experiencia">
+                <div class="section-head">
+                    <h2>Explora segun tu estilo</h2>
+                    <p>
+                        Elige un enfoque y te mostramos contenido contextual para ayudarte a encontrar el camino que mas
+                        encaja contigo dentro del universo motero.
+                    </p>
+                </div>
+
+                <div class="interest-controls" role="tablist" aria-label="Filtros de contenido">
+                    <button class="filter-btn is-active" data-filter="ciudad" type="button">Ciudad</button>
+                    <button class="filter-btn" data-filter="ruta" type="button">Ruta</button>
+                    <button class="filter-btn" data-filter="aventura" type="button">Aventura</button>
+                </div>
+
+                <div class="interest-grid">
+                    <article class="interest-card" data-kind="ciudad">
+                        <h3>Movilidad urbana con criterio</h3>
+                        <p>
+                            Encuentra perspectivas sobre opciones ideales para el dia a dia, trayectos cortos y un uso
+                            eficiente dentro del ritmo de la ciudad.
+                        </p>
+                    </article>
+                    <article class="interest-card" data-kind="ciudad">
+                        <h3>Comodidad y practicidad</h3>
+                        <p>
+                            Priorizamos contenido orientado a experiencias reales de uso para que puedas decidir con una
+                            vision aterrizada y util.
+                        </p>
+                    </article>
+                    <article class="interest-card" data-kind="ruta">
+                        <h3>Escapadas de fin de semana</h3>
+                        <p>
+                            Descubre ideas de rutas, recomendaciones de preparacion y puntos clave para disfrutar viajes
+                            mas seguros y mejor planificados.
+                        </p>
+                    </article>
+                    <article class="interest-card" data-kind="ruta">
+                        <h3>Comunidad de carretera</h3>
+                        <p>
+                            Conecta con una vibra colaborativa donde compartir experiencias suma valor para quienes
+                            recien inician y para quienes ya ruedan hace tiempo.
+                        </p>
+                    </article>
+                    <article class="interest-card" data-kind="aventura">
+                        <h3>Espiritu explorador</h3>
+                        <p>
+                            Contenido enfocado en escenarios mixtos, trayectos variados y mentalidad aventurera para
+                            quienes buscan salir de la rutina.
+                        </p>
+                    </article>
+                    <article class="interest-card" data-kind="aventura">
+                        <h3>Preparacion inteligente</h3>
+                        <p>
+                            Consejos de contexto para planear mejor cada salida, desde la logistica hasta la lectura del
+                            entorno antes de rodar.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="site-overview">
+                <article class="text-card">
+                    <h3>Que es MOTOCORE</h3>
+                    <p>
+                        MOTOCORE es un punto de encuentro digital para personas que viven la cultura motera y quieren
+                        informarse rapido sobre lo que se mueve en el mercado peruano.
+                    </p>
+                </article>
+
+                <article class="text-card">
+                    <h3>Proposito del sitio</h3>
+                    <p>
+                        La idea es facilitar la busqueda de modelos y centralizar contenido util para que cada motero
+                        pueda comparar, decidir y avanzar con mas confianza.
+                    </p>
+                </article>
+
+                <article class="text-card">
+                    <h3>Comunidad primero</h3>
+                    <p>
+                        Este proyecto busca crecer junto a su comunidad: compartiendo experiencias, rutas, tendencias y
+                        todo lo que hace unica la pasion por las motos.
+                    </p>
+                </article>
+            </section>
+
+            <section class="gallery" aria-label="Comunidad motera">
+                <article class="gallery-item">
+                    <img src="./assets/img/comunidad-biker3.avif" alt="Comunidad motera reunida" />
+                </article>
+                <article class="gallery-item">
+                    <img src="./assets/img/comunidad-biker.jpg" alt="Moteros en carretera" />
+                </article>
+                <article class="gallery-item">
+                    <img src="./assets/img/comunidad-biker2.webp" alt="Escena de motociclismo urbano" />
+                </article>
+            </section>
+
+            <section class="testimonial-strip" aria-label="Testimonios de comunidad">
+                <article class="testimonial-card">
+                    <p>
+                        "Por fin un sitio donde puedo tener una mirada general del mercado sin perder tiempo buscando en
+                        veinte paginas distintas."
+                    </p>
+                    <span>- Andrea, Lima</span>
+                </article>
+                <article class="testimonial-card">
+                    <p>
+                        "El enfoque comunitario se siente real. No es solo informacion, tambien inspira a salir a
+                        rodar con mejor criterio."
+                    </p>
+                    <span>- Juan, Arequipa</span>
+                </article>
+            </section>
+
+            <section class="faq" aria-label="Preguntas frecuentes">
+                <div class="section-head">
+                    <h2>Preguntas frecuentes</h2>
+                    <p>Respuestas rapidas para entender como te ayuda MOTOCORE en tu proceso de eleccion.</p>
+                </div>
+
+                <article class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        Como me ayuda MOTOCORE a comparar mas rapido?
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Organizando informacion de forma clara y contextual para que puedas identificar diferencias
+                            relevantes sin navegar entre fuentes desordenadas.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        Esta pagina esta dirigida solo a expertos?
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            No. El enfoque esta pensado tanto para quien recien inicia como para quien ya tiene
+                            experiencia y busca una referencia mas rapida.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        MOTOCORE seguira agregando contenido?
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Si. La idea es crecer de forma continua con la comunidad, incorporando mas contexto,
+                            actualizaciones y espacios de participacion.
+                        </p>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <script src="./assets/js/main.js"></script>
+    </body>
 </html>
